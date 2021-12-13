@@ -29,8 +29,6 @@
   "bugs": {
     "url": "https://github.com/jougene/pgquery/issues"
   },
-  "dependencies": {
-  },
   "devDependencies": {
     "@babel/eslint-parser": "^7.13.14",
     "@babel/plugin-proposal-class-properties": "^7.13.0",
@@ -39,9 +37,10 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.3.1",
+    "module-alias": "^2.2.2",
     "mocha": "^8.3.2",
     "nodemon": "^2.0.7",
-    "pg": "^8.6.0"
+    "pg": "^8.7.1"
   },
   "nodemonConfig": {
     "restartable": false
@@ -52,5 +51,11 @@
     "file": [
       "./test/bootstrap.js"
     ]
+  },
+  "dependencies": {
+    "pg-pool": "^3.4.1"
+  },
+  "_moduleAliases": {
+    "@jougene/pgquery": "./src"
   }
 }
