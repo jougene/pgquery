@@ -1,0 +1,56 @@
+{
+  "name": "@jougene/pgquery",
+  "version": "0.0.1",
+  "author": "Eugene Sinitsyn",
+  "keywords": [
+    "postgres",
+    "pg",
+    "querybuilder",
+    "qb"
+  ],
+  "description": "Postgres query builder",
+  "homepage": "https://github.com/jougene/pgquery#readme",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "eslint \"{src,examples,test}/**/*.js\"",
+    "examples:payments:print": "node examples/payments",
+    "examples:payments:repl": "nodemon --experimental-repl-await examples/payments/repl.js",
+    "examples:payments:repl:debug": "DEBUG=knex:query,knex:bindings nodemon --experimental-repl-await examples/payments/repl.js",
+    "test": "mocha test/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jougene/pgquery.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jougene/pgquery/issues"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.13.14",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "eslint": "^7.23.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "mocha": "^8.3.2",
+    "nodemon": "^2.0.7",
+    "pg": "^8.6.0"
+  },
+  "nodemonConfig": {
+    "restartable": false
+  },
+  "mocha": {
+    "colors": true,
+    "exit": true,
+    "file": [
+      "./test/bootstrap.js"
+    ]
+  }
+}
