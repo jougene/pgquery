@@ -7,6 +7,14 @@ class Querybuilder {
     return this
   }
 
+  insert () {
+    return this
+  }
+
+  update () {
+    return this
+  }
+
   first () {
     return this
   }

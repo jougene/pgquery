@@ -44,13 +44,13 @@ limit 1
     it('join reverse', () => {
       const sql = qb('posts').join('users').toSql()
 
-      const expected = `
+      const expected = deformat(`
 select
   posts.*,
   to_jsonb(users.*) as "user"
 from posts
 join users on posts.user_id = users.id
-`
+`)
       assert.equal(sql, expected)
     })
 
